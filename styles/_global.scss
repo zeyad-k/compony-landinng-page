@@ -11,4 +11,10 @@
     background-color: var(--color-off-white);
     color: var(--color-very-dark-blue);
   }
+
+  &--disabled {
+    background-color: var(--color-grayish-blue);
+    cursor: not-allowed;
+    user-select: none;
+  }
 }

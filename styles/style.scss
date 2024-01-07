@@ -3,6 +3,7 @@
 
 /* variables */
 :root {
+  --color-white: #ffffff;
   --color-soft-blue: #5368df;
   --color-soft-red: #fa5757;
   --color-grayish-blue: #9194a1;
@@ -55,6 +56,7 @@ ol {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -102,10 +104,16 @@ body {
   }
 }
 /* End Header */
+
 .section {
   @include display-flex;
 
   gap: calc(var(--default-gap) * 2);
+
+  &--one--column {
+    flex-direction: column;
+    gap: calc(var(--default-padding/2));
+  }
 
   &__content {
     display: flex;
@@ -120,6 +128,11 @@ body {
   &__description {
     font-size: 1.4rem;
     color: var(--color-grayish-blue);
+
+    .section--one--column & {
+      max-width: 50rem;
+      text-align: end;
+    }
   }
   &__buttons {
     display: flex;
@@ -136,5 +149,49 @@ body {
     max-width: 100%;
     display: flex;
     flex: 1;
+  }
+}
+.cards {
+  display: flex;
+  gap: var(--default-padding);
+  width: 100%;
+  margin-top: calc(var(--default-padding) * 2);
+  justify-content: space-between;
+}
+.card {
+  @include display-flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.2);
+  border-radius: var(--default-radius);
+  width: 25rem;
+  height: 25rem;
+  padding: calc(2 * var(--default-padding)) var(--default-padding)
+    var(--default-padding);
+
+  &__title {
+    font-size: 1.8rem;
+  }
+  &__image {
+    width: 6rem;
+    max-width: 100%;
+    margin-bottom: calc(var(--default-padding) / 2);
+  }
+  &__button {
+    position: relative;
+    align-self: stretch;
+    text-align: center;
+    margin-top: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/bg-dots.svg") repeat-x;
+      background-size: contain;
+      height: 0.4rem;
+      top: calc(var(--default-padding) * -1.4);
+      left: calc(var(--default-padding) * -1);
+      right: calc(var(--default-padding) * -1);
+    }
   }
 }
