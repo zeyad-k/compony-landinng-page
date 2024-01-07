@@ -131,7 +131,7 @@ body {
 
     .section--one--column & {
       max-width: 50rem;
-      text-align: end;
+      text-align: center;
     }
   }
   &__buttons {
@@ -193,5 +193,30 @@ body {
       left: calc(var(--default-padding) * -1);
       right: calc(var(--default-padding) * -1);
     }
+  }
+}
+
+.faq {
+  max-width: 50rem;
+  margin-top: calc(var(--default-padding) * 1.5);
+  border-top: 0.1rem solid var(--color-grayish-blue);
+  border-bottom: 0.1rem solid var(--color-grayish-blue);
+  &__row {
+    position: relative;
+    padding: var(--default-padding) 0;
+    &:not(:last-of-type) {
+      border-bottom: 0.1rem solid var(--color-grayish-blue);
+    }
+  }
+  &__arrow {
+    position: absolute;
+    width: 1.2rem;
+    max-width: 100%;
+    right: 0;
+    top: calc(var(--default-padding) + 0.6rem);
+  }
+
+  &__input {
+    display: none;
   }
 }
