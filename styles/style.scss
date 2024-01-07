@@ -1,4 +1,6 @@
 @import "./mixins";
+@import "./global";
+
 /* variables */
 :root {
   --color-soft-blue: #5368df;
@@ -62,6 +64,7 @@ body {
 }
 
 /* End CSS Reset */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -98,3 +101,39 @@ body {
   }
 }
 /* End Header */
+.section {
+  @include display-flex;
+
+  gap: calc(var(--default-gap) * 2);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: calc(var(--default-padding) / 2);
+  }
+
+  &:nth-of-type(1) &__title {
+    font-size: 4.2rem;
+  }
+  &__description {
+    font-size: 1.4rem;
+    color: var(--color-grayish-blue);
+  }
+  &__buttons {
+    display: flex;
+    gap: var(--default-padding);
+    margin-top: var(--default-padding);
+  }
+
+  &__imagecontent {
+    display: flex;
+    flex: 1;
+  }
+
+  &__image {
+    max-width: 100%;
+    display: flex;
+    flex: 1;
+  }
+}
