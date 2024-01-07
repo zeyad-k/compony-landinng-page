@@ -72,6 +72,7 @@ body {
   max-width: var(--desktop-width);
   margin: 0 auto;
   padding: 0 var(--default-padding);
+  transition: var(--timing-animation);
 }
 /*  Header*/
 .header {
