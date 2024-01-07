@@ -65,6 +65,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  gap: calc(var(--default-padding) * 4);
   max-width: var(--desktop-width);
   margin: 0 auto;
   padding: 0 var(--default-padding);
