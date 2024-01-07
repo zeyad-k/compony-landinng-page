@@ -11,7 +11,8 @@
   --desktop-width: 900px;
   --tablet-width: 600px;
   --timing-animation: 0.2s;
-  --default-gap: 0.5rem;
+  --default-gap: 0.8rem;
+  font-weight: 500;
 }
 
 /* End variables */
@@ -35,6 +36,7 @@ a {
   color: inherit;
   display: inline-block;
   cursor: pointer;
+  text-decoration: none;
 }
 
 button {
@@ -60,3 +62,38 @@ body {
 }
 
 /* End CSS Reset */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--default-padding);
+}
+/*  Header*/
+.header {
+  @include display-flex;
+  justify-content: space-between;
+  margin-top: var(--default-padding);
+}
+
+.logocontent {
+  @include display-flex;
+  gap: var(--default-gap);
+}
+.logo-image {
+  width: 4rem;
+  max-width: 100%;
+}
+.links {
+  @include display-flex;
+  gap: var(--default-padding);
+
+  &__link {
+    color: var(--color-very-dark-blue);
+    transition: var(--timing-animation) ease-in-out;
+    &:hover {
+      color: var(--color-soft-red);
+    }
+  }
+}
+/* End Header */

@@ -15,3 +15,7 @@
     @content;
   }
 }
+@mixin display-flex {
+  display: flex;
+  align-items: center;
+}
