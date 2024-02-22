@@ -1,5 +1,5 @@
  
- const questionsLabels = document.querySelectorAll(".faq__questions");
+const questionsLabels = document.querySelectorAll(".faq__questions");
 
 const onClickHandler = (item) => {
   item.addEventListener("keydown", (event) => {
