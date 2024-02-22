@@ -1,8 +1,9 @@
-import { addEnterKeyClickListener  } from "./utils";
+import { addEnterKeyClickListener, observeElements } from "./utils";
 
 const questionsLabels = document.querySelectorAll(".faq__questions");
+const sectionsElements = document.querySelectorAll(".section");
 
-questionsLabels.forEach(addEnterKeyClickListener)
- 
+questionsLabels.forEach(addEnterKeyClickListener);
+observeElements(sectionsElements);
 
- 
+

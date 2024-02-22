@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "scss": "^0.2.4",
     "vite": "^5.1.4"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1"
   }
 }
