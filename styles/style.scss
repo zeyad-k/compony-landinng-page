@@ -127,7 +127,7 @@ body {
 .section {
   @include display-flex;
 
-  gap: calc(var(--default-gap) * 2);
+  gap: calc(var(--default-gap) * 23);
 
   @include mobile {
     flex-direction: column;
@@ -135,11 +135,12 @@ body {
   }
   opacity: 0;
   transform: translateY(1rem);
-  transition: all var(--timing-animation) ease-in-out;
+  transition: all calc(var(--timing-animation) * 2.5) ease-in-out;
 
   &.in-view {
     opacity: 1;
     transform: translateY(0);
+    gap: calc(var(--default-gap) * 2);
 
     :not(.section--one--column) {
       & > div:nth-of-type(1) {
